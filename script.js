@@ -36,3 +36,38 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+// seleziono elemento di output
+
+const listTeam = document.querySelector(".team-container");
+// console.log(listTeam);
+
+
+let items = "";
+
+// output temporaneo
+
+for (let i = 0; i < teamMembers.length; i++) {
+  let membroIesimo = teamMembers[i];
+
+  // console.log(membroIesimo);
+
+  const {name, role, email, img} = membroIesimo;
+
+  console.log(name, role, email, img);
+
+
+  items += `
+  <li>
+  nome: ${name} <br>
+  ruolo: ${role} <br>
+  email: ${email} <br>
+  immagine: ${img} <br>
+  <li>`
+
+  console.log(items);
+  
+  
+}
+
+listTeam.innerHTML = items;
