@@ -58,12 +58,17 @@ for (let i = 0; i < teamMembers.length; i++) {
 
 
   items += `
-  <li>
-  nome: ${name} <br>
-  ruolo: ${role} <br>
-  email: ${email} <br>
-  immagine: ${img} <br>
-  <li>`
+  <div class="team-card">
+    <div class="card-image">
+        <img src="${img}" alt="">
+    </div>
+    <div class="card-text">
+        <h2>${name}</h2>
+        <h3>${role}</h3>
+        <p>${email}</p>
+    </div>
+  </div>
+  `
 
   console.log(items);
   
